@@ -4,7 +4,7 @@ using namespace std;
 void main() {
 	float average = 0.0;
 	float total = 0.0;
-	int size = 10;
+	int size = 20;
 	for (int i = 0; i < size; i++) {
 		total += i;
 		cout << i << ") " << total << endl;
