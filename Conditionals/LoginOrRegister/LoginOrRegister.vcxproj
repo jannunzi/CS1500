@@ -10,13 +10,10 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AverageWithWhileLoop.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FA46C6FF-4F0B-4B15-96B0-EB97E4FDAF93}</ProjectGuid>
+    <ProjectGuid>{F5A92112-2497-414E-9771-83BABC673C88}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>AverageWithWhileLoop</RootNamespace>
+    <RootNamespace>LoginOrRegister</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -78,6 +75,9 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="LoginOrRegister.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
