@@ -3,6 +3,11 @@
 using namespace std;
 
 int main() {
+
+	const int YELLOW_SELECTED = 1;
+	const int BLUE_SELECTED = 2;
+	const int RED_SELECTED = 3;
+
 	int selection;
 	int yellowCount = 0;
 	int blueCount = 0;
@@ -17,16 +22,22 @@ int main() {
 
 		cin >> selection;
 
-		if (selection == 1)
-			yellowCount = yellowCount + 1;
-		else if (selection == 2)
-			blueCount = blueCount + 1;
-		else if (selection == 3)
+		switch (selection) {
+		case 0:
+			break;
+		case YELLOW_SELECTED:
+			yellowCount++;
+			break;
+		case BLUE_SELECTED:
+			blueCount++;
+			break;
+		case RED_SELECTED:
 			redCount++;
-		else if (selection == 0)
-			;
-		else
+			break;
+		default:
 			cout << "Invalid Option" << endl;
+			break;
+		}
 
 	} while (selection != 0);
 
