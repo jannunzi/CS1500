@@ -7,6 +7,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VariableDemo", "VariableDem
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpleMenu", "SimpleMenu\SimpleMenu.vcxproj", "{D9C54C7B-9DD8-4DAE-8757-14AC8A20B399}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WriteFileDemo", "WriteFileDemo\WriteFileDemo.vcxproj", "{88B11A52-F780-4F36-9D38-40D3562BF370}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReadFileDemo", "ReadFileDemo\ReadFileDemo.vcxproj", "{2679E90C-E198-4157-8130-D2083423D243}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -21,6 +25,14 @@ Global
 		{D9C54C7B-9DD8-4DAE-8757-14AC8A20B399}.Debug|Win32.Build.0 = Debug|Win32
 		{D9C54C7B-9DD8-4DAE-8757-14AC8A20B399}.Release|Win32.ActiveCfg = Release|Win32
 		{D9C54C7B-9DD8-4DAE-8757-14AC8A20B399}.Release|Win32.Build.0 = Release|Win32
+		{88B11A52-F780-4F36-9D38-40D3562BF370}.Debug|Win32.ActiveCfg = Debug|Win32
+		{88B11A52-F780-4F36-9D38-40D3562BF370}.Debug|Win32.Build.0 = Debug|Win32
+		{88B11A52-F780-4F36-9D38-40D3562BF370}.Release|Win32.ActiveCfg = Release|Win32
+		{88B11A52-F780-4F36-9D38-40D3562BF370}.Release|Win32.Build.0 = Release|Win32
+		{2679E90C-E198-4157-8130-D2083423D243}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2679E90C-E198-4157-8130-D2083423D243}.Debug|Win32.Build.0 = Debug|Win32
+		{2679E90C-E198-4157-8130-D2083423D243}.Release|Win32.ActiveCfg = Release|Win32
+		{2679E90C-E198-4157-8130-D2083423D243}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
