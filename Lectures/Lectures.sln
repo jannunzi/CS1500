@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WriteFileDemo", "WriteFileD
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ReadFileDemo", "ReadFileDemo\ReadFileDemo.vcxproj", "{2679E90C-E198-4157-8130-D2083423D243}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Functions.vcxproj", "{569A3C45-CBB5-49A6-86D1-939ECE42CD0D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Arrays", "Arrays\Arrays.vcxproj", "{065F50F9-B46B-4930-99CF-7C455A9AE2BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +37,14 @@ Global
 		{2679E90C-E198-4157-8130-D2083423D243}.Debug|Win32.Build.0 = Debug|Win32
 		{2679E90C-E198-4157-8130-D2083423D243}.Release|Win32.ActiveCfg = Release|Win32
 		{2679E90C-E198-4157-8130-D2083423D243}.Release|Win32.Build.0 = Release|Win32
+		{569A3C45-CBB5-49A6-86D1-939ECE42CD0D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{569A3C45-CBB5-49A6-86D1-939ECE42CD0D}.Debug|Win32.Build.0 = Debug|Win32
+		{569A3C45-CBB5-49A6-86D1-939ECE42CD0D}.Release|Win32.ActiveCfg = Release|Win32
+		{569A3C45-CBB5-49A6-86D1-939ECE42CD0D}.Release|Win32.Build.0 = Release|Win32
+		{065F50F9-B46B-4930-99CF-7C455A9AE2BA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{065F50F9-B46B-4930-99CF-7C455A9AE2BA}.Debug|Win32.Build.0 = Debug|Win32
+		{065F50F9-B46B-4930-99CF-7C455A9AE2BA}.Release|Win32.ActiveCfg = Release|Win32
+		{065F50F9-B46B-4930-99CF-7C455A9AE2BA}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

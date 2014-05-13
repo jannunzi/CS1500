@@ -10,6 +10,24 @@ string getCurrentDateAndTime();
 
 int main() {
 	/*
+	 *	Reading a CSV File
+	 */
+	cout	<< endl << "Reading a CSV File" << endl;
+	cout	<< endl << "Creating a CSV File" << endl;
+	string	fileName;
+	cout	<< "File Name: ";
+	cin		>> fileName;
+	cout	<< "Creating file: " << fileName << endl;
+	fileName += ".csv";
+	ofstream outputFile;
+	outputFile.open(fileName, ios::out | ios::app);
+
+	outputFile << getCurrentDateAndTime() << ",Deposit,123.45,234.56" << endl;
+	outputFile << getCurrentDateAndTime() << ",Withdraw,22.33,333.44" << endl;
+	outputFile.close();
+	getch();
+
+	/*
 	 *	Reading a Hello World File
 	 */
 	cout	<< endl << "Reading a Hello World File" << endl;
@@ -38,7 +56,7 @@ int main() {
 
 	// creating a simple file
 	ofstream multiLineOutputFile;
-	multiLineOutputFile.open("MultiLine.txt");
+	multiLineOutputFile.open("MultiLine.txt", ios::out | ios::app);
 	for(int i=0; i<10; i++)
 		multiLineOutputFile << "Line " << i << " Data" << endl;
 	multiLineOutputFile.close();
