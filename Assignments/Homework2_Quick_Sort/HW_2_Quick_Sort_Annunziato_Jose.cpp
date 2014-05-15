@@ -3,7 +3,7 @@
 using namespace std;
 
 void displayApplication(int appIndex, string appNames[], float appPrices[]);
-void displayAllApplication(string appNames[], float appPrices[], int appCount);
+void displayAllApplications(string appNames[], float appPrices[], int appCount);
 void swapApps(int appIndex1, int appIndex2, string appNames[], float appPrices[]);
 int  pivot(int first, int last, string appNames[], float appPrices[]);
 void quickSort(int first, int last, string appNames[], float appPrices[]);
@@ -25,9 +25,9 @@ void main()
 		34.99, 24.99, 14.99
 	};
 
-	displayAllApplication(appNames, appPrices, 9);
+	displayAllApplications(appNames, appPrices, 9);
 	quickSort(0, 8, appNames, appPrices);
-	displayAllApplication(appNames, appPrices, 9);
+	displayAllApplications(appNames, appPrices, 9);
 	int foundIndex = binarySearchForPrice(25.99, 0, 9, appPrices);
 
 	if (foundIndex == -1)
@@ -78,7 +78,7 @@ void displayApplication(int appIndex, string appNames[], float appPrices[])
 	cout << appNames[appIndex] << " $" << appPrices[appIndex] << endl;
 }
 
-void displayAllApplication(string appNames[], float appPrices[], int appCount)
+void displayAllApplications(string appNames[], float appPrices[], int appCount)
 {
 	cout << "Applications:" << endl;
 	for (int i = 0; i < appCount; i++)
