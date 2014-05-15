@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergeSort", "MergeSort\Merg
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MergingArrays", "MergingArrays\MergingArrays.vcxproj", "{C9051719-1BE6-469A-8122-F9C502736734}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QuickSort", "QuickSort\QuickSort.vcxproj", "{97725A7A-BDBD-47F3-9F9F-29CAADCB05BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -39,6 +41,10 @@ Global
 		{C9051719-1BE6-469A-8122-F9C502736734}.Debug|Win32.Build.0 = Debug|Win32
 		{C9051719-1BE6-469A-8122-F9C502736734}.Release|Win32.ActiveCfg = Release|Win32
 		{C9051719-1BE6-469A-8122-F9C502736734}.Release|Win32.Build.0 = Release|Win32
+		{97725A7A-BDBD-47F3-9F9F-29CAADCB05BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97725A7A-BDBD-47F3-9F9F-29CAADCB05BE}.Debug|Win32.Build.0 = Debug|Win32
+		{97725A7A-BDBD-47F3-9F9F-29CAADCB05BE}.Release|Win32.ActiveCfg = Release|Win32
+		{97725A7A-BDBD-47F3-9F9F-29CAADCB05BE}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

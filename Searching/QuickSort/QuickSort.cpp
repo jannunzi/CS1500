@@ -16,7 +16,8 @@ int partition(int values[], int first, int last)
 	int p = first;
 	int pvalue = values[first];
 
-	for (int i = first + 1; i <= last; i++)
+//	for (int i = first + 1; i <= last; i++)
+	for (int i = first + 1; i < last; i++)
 	{
 		if (values[i] <= pvalue)
 		{
@@ -28,11 +29,23 @@ int partition(int values[], int first, int last)
 	return p;
 }
 
+void quicksort(int values[], int start, int end)
+{
+	if (start > end)
+		return;
+	int pivot = partition(values, start, end);
+	quicksort(values, start, pivot-1);
+	quicksort(values, pivot + 1, end);
+}
+
 int main()
 {
 	const int SIZE = 10;
 
-	srand(time(NULL));
+	int t = time(NULL);
+	cout << t << endl;
+
+	srand(t);
 
 	int haystack[SIZE];
 
@@ -40,6 +53,7 @@ int main()
 	{
 		cout << i << "\t";
 	}
+
 	cout << endl;
 	for (int i = 0; i < SIZE; i++)
 	{
@@ -47,11 +61,13 @@ int main()
 		cout << haystack[i] << "\t";
 	}
 	cout << endl;
-	int p = partition(haystack, 0, SIZE-1);
+
+	quicksort(haystack, 0, SIZE);
+
 	for (int i = 0; i < SIZE; i++)
 	{
 		cout << haystack[i] << "\t";
 	}
-	cout << endl << endl << "p: " << p << "\tpvalue: " << haystack[p] << endl;
+
 	getchar();
 }

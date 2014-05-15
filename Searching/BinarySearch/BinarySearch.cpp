@@ -1,3 +1,4 @@
+#include <ctime>
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
@@ -12,7 +13,8 @@ int binarySearch(int haystack[], int needle, int start, int end)
 		return -1;
 	}
 	int middle = (start + end) / 2;
-//	cout << needle << "\t" << start << "\t" << middle << "\t" << end << "\t" << haystack[middle] << endl;
+
+	cout << comparisonCount << " ";
 	if (needle == haystack[middle])
 	{
 		comparisonCount++;
@@ -36,6 +38,7 @@ int linearSearch(int haystack[], int needle, int start, int end)
 	for (int i = start; i < end; i++)
 	{
 		comparisonCount++;
+		cout << comparisonCount << " ";
 		if (needle == haystack[i])
 		{
 			return i;
@@ -46,24 +49,39 @@ int linearSearch(int haystack[], int needle, int start, int end)
 
 int main()
 {
-	int haystack[1000];
-	for (int i = 0; i < 1000; i++)
+	const int SIZE = 10000;
+	int haystack[SIZE];
+	std::clock_t    start, end;
+
+	for (int i = 0; i < SIZE; i++)
 	{
-		haystack[i] = rand() % 1000;
+		haystack[i] = rand() % SIZE;
+//		cout << haystack[i] << " ";
 	}
 
 	comparisonCount = 0;
-	int foundAt = linearSearch(haystack, 492, 0, 1000);
+	
+	start = std::clock();
+	cout << "Start: " << start << endl;
+	int foundAt = linearSearch(haystack, 2081, 0, SIZE);
+	end = std::clock();
+	cout << endl << "End: " << end << endl;
+	cout << "Ellapsed: " << end - start << "ms" << endl;
 	cout << "Found At: " << foundAt << endl;
 	cout << "comparisonCount: " << comparisonCount << endl;
 
-	for (int i = 0; i < 1000; i++)
+	for (int i = 0; i < SIZE; i++)
 	{
 		haystack[i] = i * 10;
 	}
 
 	comparisonCount = 0;
-	foundAt = binarySearch(haystack, 800, 0, 1000);
+	start = std::clock();
+	cout << "Start: " << start << endl;
+	foundAt = binarySearch(haystack, 8010, 0, SIZE);
+	end = std::clock();
+	cout << endl << "End: " << end << endl;
+	cout << "Ellapsed: " << end - start << "ms" << endl;
 	cout << "Found At: " << foundAt << endl;
 	cout << "comparisonCount: " << comparisonCount << endl;
 	getchar();
