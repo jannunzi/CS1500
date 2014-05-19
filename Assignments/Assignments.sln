@@ -9,6 +9,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab2", "Lab2\Lab2.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HW1_Login_Registration", "HW1_Login_Registration\HW1_Login_Registration.vcxproj", "{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab_5_Stacks", "Lab_5_Stacks\Lab_5_Stacks.vcxproj", "{05091B04-ED80-40CD-8439-C7BA7C5335B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab5 Dynamic Arrays", "Lab5 Dynamic Arrays\Lab5 Dynamic Arrays.vcxproj", "{AD820935-A41A-4FC2-8C78-79AE7B7C91B4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +31,14 @@ Global
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Debug|Win32.Build.0 = Debug|Win32
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Release|Win32.ActiveCfg = Release|Win32
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Release|Win32.Build.0 = Release|Win32
+		{05091B04-ED80-40CD-8439-C7BA7C5335B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{05091B04-ED80-40CD-8439-C7BA7C5335B0}.Debug|Win32.Build.0 = Debug|Win32
+		{05091B04-ED80-40CD-8439-C7BA7C5335B0}.Release|Win32.ActiveCfg = Release|Win32
+		{05091B04-ED80-40CD-8439-C7BA7C5335B0}.Release|Win32.Build.0 = Release|Win32
+		{AD820935-A41A-4FC2-8C78-79AE7B7C91B4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AD820935-A41A-4FC2-8C78-79AE7B7C91B4}.Debug|Win32.Build.0 = Debug|Win32
+		{AD820935-A41A-4FC2-8C78-79AE7B7C91B4}.Release|Win32.ActiveCfg = Release|Win32
+		{AD820935-A41A-4FC2-8C78-79AE7B7C91B4}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
