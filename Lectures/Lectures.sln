@@ -27,6 +27,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pointers", "Pointers\Pointe
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PassByReference", "PassByReference\PassByReference.vcxproj", "{B8F6A37E-210C-4F79-829C-8564F625B89F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DynamicArrays", "DynamicArrays\DynamicArrays.vcxproj", "{2A391E89-DA54-46D2-BA80-49C971845E6E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -81,6 +83,10 @@ Global
 		{B8F6A37E-210C-4F79-829C-8564F625B89F}.Debug|Win32.Build.0 = Debug|Win32
 		{B8F6A37E-210C-4F79-829C-8564F625B89F}.Release|Win32.ActiveCfg = Release|Win32
 		{B8F6A37E-210C-4F79-829C-8564F625B89F}.Release|Win32.Build.0 = Release|Win32
+		{2A391E89-DA54-46D2-BA80-49C971845E6E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2A391E89-DA54-46D2-BA80-49C971845E6E}.Debug|Win32.Build.0 = Debug|Win32
+		{2A391E89-DA54-46D2-BA80-49C971845E6E}.Release|Win32.ActiveCfg = Release|Win32
+		{2A391E89-DA54-46D2-BA80-49C971845E6E}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
