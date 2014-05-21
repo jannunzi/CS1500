@@ -88,8 +88,38 @@ void displayIntArray(int* arr, int n)
 	}
 }
 
+void readArr(int* a, int size)
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << "arr[" << i << "] = ";
+		cin >> a[i];
+	}
+}
+
 int main()
 {
+	int s1;
+	cin >> s1;
+	int* arr = new int[s1];
+	readArr(arr, s1);
+	for (int i = 0; i < s1; i++)
+	{
+		cout << arr[i] << endl;
+	}
+	delete arr;
+
+	cin >> s1;
+	arr = new int[s1];
+	arr[0] = 21;
+	arr[1] = 32;
+	arr[2] = 43;
+	for (int i = 0; i < s1; i++)
+	{
+		cout << arr[i] << endl;
+	}
+	delete arr;
+
 	int a[] = {12,23,34,45};
 
 	int n;
