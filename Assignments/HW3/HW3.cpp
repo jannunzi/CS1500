@@ -26,6 +26,7 @@ int main()
 	int choice;
 	int appListSize;
 	int appListCount = 0;
+	int appIndex;
 	Application* appList;
 	Application* app;
 	do
@@ -48,13 +49,9 @@ int main()
 			displayAppList(appList, appListCount);
 			break;
 		case UPDATE_APP:
-			int appIndex = chooseApp(appList, appListCount);
+			appIndex = chooseApp(appList, appListCount);
 			app = createNewApp();
 			updateAppApp(appList, appIndex, app);
-			break;
-		case DELETE_APP:
-//			int appIndex = chooseApp(appList);
-//			deleteApp(appIndex);
 			break;
 		}
 	} while (choice != QUIT);
@@ -67,8 +64,8 @@ int displayMainMenu()
 	cout << "[2] Add New Application to List" << endl;
 	cout << "[3] Display List of Applications" << endl;
 	cout << "[4] Update Existing Application" << endl;
-	cout << "[5] Delete Existing Application" << endl;
 	cout << "[0] Quit" << endl;
+	cout << "Your choice: ";
 	int choice;
 	cin >> choice;
 	cout << endl;
