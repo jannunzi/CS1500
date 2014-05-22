@@ -22,7 +22,7 @@ void addPolynomials(int A[], int B[], int n, int m)
 			c = B[i];
 		cout << c << "x^" << i;
 
-		// dont print "+" in the last iteration (optional)
+		// dont print "+" in the last iteration
 		if (i > min)
 			cout << " + ";
 	}
@@ -37,7 +37,7 @@ void addPolynomials(int A[], int B[], int n, int m)
 		int c = A[i] + B[i];
 		cout << c << "x^" << i;
 
-		// dont print "+" in the last iteration (optional)
+		// dont print "+" in the last iteration
 		if (i > 0)
 			cout << " + ";
 	}
