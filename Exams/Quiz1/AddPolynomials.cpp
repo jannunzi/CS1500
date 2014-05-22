@@ -1,49 +1,70 @@
 #include <iostream>
 using namespace std;
 
-void addPolynomials(int a[], int b[], int la, int lb)
+void addPolynomials(int A[], int B[], int n, int m)
 {
-	// find out which length is smaller and biggest
-	int lmin = la < lb ? la : lb;
-	int lmax = la > lb ? la : lb;
+	// find out which array is smaller and bigger
+	int min = n < m ? n : m;
+	int max = n > m ? n : m;
 
-	for (int i = lmax - 1; i >= lmin; i--)
+	// iterate backwards from max to min
+	// if different size arrays
+	// to deal with elements that don't need
+	// to be added, just printed
+	// iterating forwards is ok too
+	// (A)
+	for (int i = max - 1; i >= min; i--)
 	{
 		int c;
-		if (la > lb)
-			c = a[i];
+		if (n > m)
+			c = A[i];
 		else
-			c = b[i];
+			c = B[i];
 		cout << c << "x^" << i << " + ";
 	}
 
-	// add a + b through smallest index
-	for (int i = lmin-1; i >= 0; i--)
+	// iterate backwards from min to 0
+	// adding A[i] and B[i]
+	// and printing it to the console
+	// iterating forwards is ok too
+	// (B)
+	for (int i = min-1; i >= 0; i--)
 	{
-		int c = a[i] + b[i];
+		int c = A[i] + B[i];
 		cout << c << "x^" << i << " + ";
 	}
+
+	// could do (A) or (B) in any order,
+	// i.e., first (A), then (B)
+	// or first (B), then (A)
+
 	cout << endl;
 }
 
 char* removeAllCharacters(char* phrase, char removeMe, int size)
 {
+	// find out how big does my new array need to be
 	int count = 0;
 	for (int i = 0; i < size; i++)
 		if (phrase[i] != removeMe)
 			count++;
 
+	// create my new array
+	// one more to hold '\0', but that's optional
 	char* newPhrase = new char[count+1];
 	int newIndex = 0;
+
+	// copy all characters from input array, but skip the removeMe character
 	for (int i = 0; i < size; i++)
 		if (phrase[i] != removeMe)
 			newPhrase[newIndex++] = phrase[i];
 
+	// add end character at the end, but that's optional
 	newPhrase[count] = '\0';
 
+	// print out new phrase (optional)
 	for (int i = 0; i < count; i++)
 		cout << newPhrase[i];
-
 	cout << endl;
 
 	return newPhrase;
