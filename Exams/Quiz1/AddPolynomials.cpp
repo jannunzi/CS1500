@@ -11,8 +11,6 @@ void addPolynomials(int A[], int B[], int n, int m)
 	// if different size arrays
 	// to deal with elements that don't need
 	// to be added, just printed
-	// iterating forwards is ok too
-	// (A)
 	for (int i = max - 1; i >= min; i--)
 	{
 		int c;
@@ -30,8 +28,6 @@ void addPolynomials(int A[], int B[], int n, int m)
 	// iterate backwards from min to 0
 	// adding A[i] and B[i]
 	// and printing it to the console
-	// iterating forwards is ok too
-	// (B)
 	for (int i = min-1; i >= 0; i--)
 	{
 		int c = A[i] + B[i];
@@ -41,10 +37,6 @@ void addPolynomials(int A[], int B[], int n, int m)
 		if (i > 0)
 			cout << " + ";
 	}
-
-	// could do (A) or (B) in any order,
-	// i.e., first (A), then (B)
-	// or first (B), then (A)
 
 	cout << endl;
 }
