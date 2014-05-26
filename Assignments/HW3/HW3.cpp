@@ -8,50 +8,63 @@ struct Application {
 };
 
 int displayMainMenu();
-Application* createNewAppList(int);
+Application* createNewAppArray(int);
 Application* createNewApp();
-void addAppToAppList(Application* app, Application* appList, int appListCount);
-void displayAppList(Application* appList, int);
-int chooseApp(Application* appList, int appListCount);
-void updateAppApp(Application* appList, int appIndex, Application* app);
+void addAppToAppArray(Application* app, Application* appArray, int appArrayCount);
+void displayAppArray(Application* appArray, int);
+int chooseApp(Application* appArray, int appArrayCount);
+void updateApp(Application* appArray, int appIndex, Application* app);
 
 int main()
 {
+	// meny choices
 	const int QUIT = 0;
-	const int CREATE_NEW_APP_LIST = 1;
+	const int CREATE_NEW_APP_ARRAY = 1;
 	const int CREATE_NEW_APP = 2;
 	const int READ_ALL_APPS = 3;
 	const int UPDATE_APP = 4;
 	const int DELETE_APP = 5;
-	int choice;
-	int appListSize;
-	int appListCount = 0;
-	int appIndex;
-	Application* appList;
-	Application* app;
+
+	Application* appArray;	// array of applications
+	Application* app;		// pointer to an application
+
+	int choice;				// current menu choice
+	int appArraySize;		// size of the array containing applications
+	int appArrayCount = 0;	// how many applications have been added to array
+	int appIndex;			// which application to update
 	do
 	{
-		choice = displayMainMenu();
+		choice = displayMainMenu();	// display menu and return choice
 		switch (choice)
 		{
-		case CREATE_NEW_APP_LIST:
+		case CREATE_NEW_APP_ARRAY:
+			// ask how many applications,
+			// read in the size,
+			// create application array dynamically
 			cout << "How Many Applications?" << endl;
-			cin >> appListSize;
+			cin >> appArraySize;
 			cout << endl;
-			appList = createNewAppList(appListSize);
+			appArray = createNewAppArray(appArraySize);
 			break;
 		case CREATE_NEW_APP:
+			// create a new application
+			// add it to the array
+			// keep count of how many apps we've created so far
 			app = createNewApp();
-			addAppToAppList(app, appList, appListCount);
-			appListCount++;
+			addAppToAppArray(app, appArray, appArrayCount);
+			appArrayCount++;
 			break;
 		case READ_ALL_APPS:
-			displayAppList(appList, appListCount);
+			// pass application array to function to display them all
+			displayAppArray(appArray, appArrayCount);
 			break;
 		case UPDATE_APP:
-			appIndex = chooseApp(appList, appListCount);
+			// display all the apps and ask user to choose one
+			// create a new app to get all the updates user wants to perform
+			// update the selected application with the data in the app just created
+			appIndex = chooseApp(appArray, appArrayCount);
 			app = createNewApp();
-			updateAppApp(appList, appIndex, app);
+			updateApp(appArray, appIndex, app);
 			break;
 		}
 	} while (choice != QUIT);
@@ -60,9 +73,9 @@ int main()
 int displayMainMenu()
 {
 	cout << "Main Menu" << endl;
-	cout << "[1] Create New List of Applications" << endl;
-	cout << "[2] Add New Application to List" << endl;
-	cout << "[3] Display List of Applications" << endl;
+	cout << "[1] Create New Array of Applications" << endl;
+	cout << "[2] Add New Application to Array" << endl;
+	cout << "[3] Display Array of Applications" << endl;
 	cout << "[4] Update Existing Application" << endl;
 	cout << "[0] Quit" << endl;
 	cout << "Your choice: ";
@@ -72,7 +85,7 @@ int displayMainMenu()
 	return choice;
 }
 
-Application* createNewAppList(int count)
+Application* createNewAppArray(int count)
 {
 	return new Application[count];
 }
@@ -89,30 +102,30 @@ Application* createNewApp()
 	return newApplication;
 }
 
-void addAppToAppList(Application* app, Application* appList, int appListCount)
+void addAppToAppArray(Application* app, Application* appArray, int appArrayCount)
 {
-	appList[appListCount] = *app;
+	appArray[appArrayCount] = *app;
 }
 
-void displayAppList(Application* appList, int appListSize)
+void displayAppArray(Application* appArray, int appArraySize)
 {
-	for (int i = 0; i < appListSize; i++)
+	for (int i = 0; i < appArraySize; i++)
 	{
-		cout << "[" << i << "] " << appList[i].name << " $" << appList[i].price << endl;
+		cout << "[" << i << "] " << appArray[i].name << " $" << appArray[i].price << endl;
 	}
 	cout << endl;
 }
 
-int chooseApp(Application* appList, int appListCount)
+int chooseApp(Application* appArray, int appArrayCount)
 {
 	int choice;
-	displayAppList(appList, appListCount);
+	displayAppArray(appArray, appArrayCount);
 	cout << "Choose Application" << endl;
 	cin >> choice;
 	return choice;
 }
 
-void updateAppApp(Application* appList, int appIndex, Application* app)
+void updateApp(Application* appArray, int appIndex, Application* app)
 {
-	appList[appIndex] = *app;
+	appArray[appIndex] = *app;
 }
