@@ -11,47 +11,81 @@ struct Department {
 	string name;
 	Employee director;
 	Employee* employees;
-};
-
-struct Company {
-	Employee president;
-	Department* department;
+	int currentSize;
+	int maxSize;
 };
 
 void displayEmployee(Employee employee);
-void displayDepartment(Department department);
-void displayCompany(Company company);
+void displayDepartment(Department* department);
 Employee createEmployee();
 void addEmployee(Department* department, Employee employee);
-void removeEmployee(Department* department, Employee employee);
 
 int main()
 {
-	Employee ada = {"Ada", "Lovelace", 321123};
+	// create some employees
+	Employee ada     = { "Ada", "Lovelace", 325123};
 	Employee babbage = { "Charlie", "Babbage", 234432 };
-	Employee turing = { "Alan", "Turing", 323323 };
-	Employee von = { "Von", "Neumann", 432234 };
+	Employee turing  = { "Alan", "Turing", 323323 };
+	Employee von     = { "John", "von Neumann", 432234 };
 
-	Employee employees[] = {ada, babbage, turing};
+	displayEmployee(ada);
 
-	Department cs = { "CS", von, employees };
+	// create an array of employees
+	Employee* employees = new Employee[10];
+	employees[0] = ada;
+	employees[1] = babbage;
+	employees[2] = turing;
+	employees[3] = von;
 
-	displayDepartment(cs);
+	// create a "CS" department,
+	// employee von is the directory,
+	// the employees are the employees listed above,
+	// currently has 4 employees,
+	// with a max of 10 employees
+	Department cs = { "CS", von, employees, 4, 10 };
 
-	getchar();
+	displayDepartment(&cs);
+	Employee newEmployee = createEmployee();
+	addEmployee(&cs, newEmployee);
+	displayDepartment(&cs);
 }
 
-void displayEmployee(Employee d) {
-	cout << d.firstName << " " << d.lastName << endl;;
-}
-
-void displayDepartment(Department department)
+void addEmployee(Department* department, Employee newEmployee)
 {
-	cout << department.name << " Department" << endl;
-	displayEmployee(department.director);
-	int size = sizeof(department.employees) / sizeof(Employee);
-	for (int i = 0; i < size; i++)
+	if (department->currentSize < department->maxSize)
 	{
-		displayEmployee(department.employees[i]);
+		department->employees[department->currentSize] = newEmployee;
+		department->currentSize++;
+	}
+}
+
+Employee createEmployee()
+{
+	Employee newEmployee;
+	cout << "New Employee:" << endl;
+	cout << "First Name: ";
+	cin >> newEmployee.firstName;
+	cout << "Last Name: ";
+	cin >> newEmployee.lastName;
+	cout << "Salary: ";
+	cin >> newEmployee.salary;
+	return newEmployee;
+}
+
+void displayEmployee(Employee d)
+{
+	cout << d.firstName << " " << d.lastName << endl;
+}
+
+void displayDepartment(Department* department)
+{
+	cout << endl;
+	cout << department->name << " Department" << endl;
+	cout << "Director: ";
+	displayEmployee(department->director);
+	cout << endl;
+	for (int i = 0; i < department->currentSize; i++)
+	{
+		displayEmployee(department->employees[i]);
 	}
 }
