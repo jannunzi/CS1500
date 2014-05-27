@@ -48,6 +48,9 @@ int main()
 	Employee newEmployee = createEmployee();
 	addEmployee(&cs, newEmployee);
 	displayDepartment(&cs);
+
+	getchar();
+	getchar();
 }
 
 void addEmployee(Department* department, Employee newEmployee)
@@ -62,7 +65,7 @@ void addEmployee(Department* department, Employee newEmployee)
 Employee createEmployee()
 {
 	Employee newEmployee;
-	cout << "New Employee:" << endl;
+	cout << "\nNew Employee:" << endl;
 	cout << "First Name: ";
 	cin >> newEmployee.firstName;
 	cout << "Last Name: ";
@@ -74,7 +77,7 @@ Employee createEmployee()
 
 void displayEmployee(Employee d)
 {
-	cout << d.firstName << " " << d.lastName << endl;
+	cout << d.firstName << " " << d.lastName << " $" << d.salary << endl;
 }
 
 void displayDepartment(Department* department)
@@ -83,7 +86,6 @@ void displayDepartment(Department* department)
 	cout << department->name << " Department" << endl;
 	cout << "Director: ";
 	displayEmployee(department->director);
-	cout << endl;
 	for (int i = 0; i < department->currentSize; i++)
 	{
 		displayEmployee(department->employees[i]);
