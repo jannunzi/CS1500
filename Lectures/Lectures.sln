@@ -37,6 +37,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Structures", "Structures\St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab7_starter", "Lab7_starter\Lab7_starter.vcxproj", "{527BBDFB-E2C4-49E6-B445-B727DD28E790}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructureStacks", "StructureStacks\StructureStacks.vcxproj", "{294888AD-2B46-4CB4-95CE-B5ED2337C39D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructureStackWithPointers", "StructureStackWithPointers\StructureStackWithPointers.vcxproj", "{43120741-3201-4B9A-A96B-89A429FE8FF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -111,6 +115,14 @@ Global
 		{527BBDFB-E2C4-49E6-B445-B727DD28E790}.Debug|Win32.Build.0 = Debug|Win32
 		{527BBDFB-E2C4-49E6-B445-B727DD28E790}.Release|Win32.ActiveCfg = Release|Win32
 		{527BBDFB-E2C4-49E6-B445-B727DD28E790}.Release|Win32.Build.0 = Release|Win32
+		{294888AD-2B46-4CB4-95CE-B5ED2337C39D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{294888AD-2B46-4CB4-95CE-B5ED2337C39D}.Debug|Win32.Build.0 = Debug|Win32
+		{294888AD-2B46-4CB4-95CE-B5ED2337C39D}.Release|Win32.ActiveCfg = Release|Win32
+		{294888AD-2B46-4CB4-95CE-B5ED2337C39D}.Release|Win32.Build.0 = Release|Win32
+		{43120741-3201-4B9A-A96B-89A429FE8FF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{43120741-3201-4B9A-A96B-89A429FE8FF3}.Debug|Win32.Build.0 = Debug|Win32
+		{43120741-3201-4B9A-A96B-89A429FE8FF3}.Release|Win32.ActiveCfg = Release|Win32
+		{43120741-3201-4B9A-A96B-89A429FE8FF3}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
