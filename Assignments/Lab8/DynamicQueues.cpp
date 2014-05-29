@@ -65,36 +65,4 @@ int main()
 	enqueueDonut(tray, moon);
 
 	displayDonutTray(tray);
-
-	getchar();
-}
-
-void enqueueDonut(DonutTray* tray, Donut* donut)
-{
-	tray->donuts[tray->front] = donut;
-	tray->front = (tray->front + 1) % tray->capacity;
-	tray->count++;
-}
-Donut* dequeueDonut(DonutTray* tray)
-{
-	Donut* donut = tray->donuts[tray->back];
-	tray->back = (tray->back + 1) % tray->capacity;
-	tray->count--;
-	return donut;
-}
-void displayDonut(Donut* donut)
-{
-	cout << "Donut: " << donut->flavor << "\t$" << donut->price << endl;
-}
-void displayDonutTray(DonutTray* tray)
-{
-	cout << endl << "====" << endl;
-	int j = tray->back;
-	for (int i = 0; i < tray->count; i++)
-	{
-		cout << "[" << j << "] ";
-		displayDonut(tray->donuts[j]);
-		j = (j + 1) % tray->capacity;
-	}
-	cout << "====" << endl << endl;
 }
