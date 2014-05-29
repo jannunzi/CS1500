@@ -55,6 +55,13 @@ void   displayDonutTray(DonutTray* tray);
 
 int main()
 {
+	Donut donuts1[10];
+	Donut donut1("Flavor 1", 0.54);
+	donuts1[0] = donut1;
+
+	Donut * donut2 = new Donut("Flavor 2", 0.56);
+
+
 	// create some donuts
 	Donut* chocolate = new Donut("Chocolate", 0.99);
 	Donut* boston = new Donut("Boston Crm", 0.99);
