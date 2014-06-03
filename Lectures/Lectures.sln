@@ -45,6 +45,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructuresAndPointers", "St
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StructureConstructors", "StructureConstructors\StructureConstructors.vcxproj", "{5B2298A7-613B-456F-9773-C5E66F289B3B}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedStructures", "LinkedStructures\LinkedStructures.vcxproj", "{DAF6E46C-DB8B-4C4E-8F59-3F8A7FE5D43F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedDonuts", "LinkedDonuts\LinkedDonuts.vcxproj", "{804E105A-32A1-4720-B35C-090529E7B135}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -135,6 +139,14 @@ Global
 		{5B2298A7-613B-456F-9773-C5E66F289B3B}.Debug|Win32.Build.0 = Debug|Win32
 		{5B2298A7-613B-456F-9773-C5E66F289B3B}.Release|Win32.ActiveCfg = Release|Win32
 		{5B2298A7-613B-456F-9773-C5E66F289B3B}.Release|Win32.Build.0 = Release|Win32
+		{DAF6E46C-DB8B-4C4E-8F59-3F8A7FE5D43F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DAF6E46C-DB8B-4C4E-8F59-3F8A7FE5D43F}.Debug|Win32.Build.0 = Debug|Win32
+		{DAF6E46C-DB8B-4C4E-8F59-3F8A7FE5D43F}.Release|Win32.ActiveCfg = Release|Win32
+		{DAF6E46C-DB8B-4C4E-8F59-3F8A7FE5D43F}.Release|Win32.Build.0 = Release|Win32
+		{804E105A-32A1-4720-B35C-090529E7B135}.Debug|Win32.ActiveCfg = Debug|Win32
+		{804E105A-32A1-4720-B35C-090529E7B135}.Debug|Win32.Build.0 = Debug|Win32
+		{804E105A-32A1-4720-B35C-090529E7B135}.Release|Win32.ActiveCfg = Release|Win32
+		{804E105A-32A1-4720-B35C-090529E7B135}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
