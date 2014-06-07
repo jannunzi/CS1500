@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedStructures", "LinkedS
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedDonuts", "LinkedDonuts\LinkedDonuts.vcxproj", "{804E105A-32A1-4720-B35C-090529E7B135}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedDonutDataType", "LinkedDonutDataType\LinkedDonutDataType.vcxproj", "{B4D6C55F-A498-4519-BE35-9C1AE2556077}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -147,6 +149,10 @@ Global
 		{804E105A-32A1-4720-B35C-090529E7B135}.Debug|Win32.Build.0 = Debug|Win32
 		{804E105A-32A1-4720-B35C-090529E7B135}.Release|Win32.ActiveCfg = Release|Win32
 		{804E105A-32A1-4720-B35C-090529E7B135}.Release|Win32.Build.0 = Release|Win32
+		{B4D6C55F-A498-4519-BE35-9C1AE2556077}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4D6C55F-A498-4519-BE35-9C1AE2556077}.Debug|Win32.Build.0 = Debug|Win32
+		{B4D6C55F-A498-4519-BE35-9C1AE2556077}.Release|Win32.ActiveCfg = Release|Win32
+		{B4D6C55F-A498-4519-BE35-9C1AE2556077}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
