@@ -7,14 +7,13 @@
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
-      
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{DF9B0FED-8301-4A77-BD72-A955A91FD54C}</ProjectGuid>
+    <ProjectGuid>{30FA873B-A57B-4403-B6A7-BE8AB7C69DD2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Lab10Starter</RootNamespace>
+    <RootNamespace>Lab10DoublyLinkedLists</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,10 +76,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <ClCompile Include="Lab_10_Doubly_Linked_Lists_Annunziato_Jose.cpp" />
->>>>>>> Lab_10_Doubly_Linked_Lists
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
