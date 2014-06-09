@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab_11_Inheritance", "Lab_1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Inheritance", "Inheritance\Inheritance.vcxproj", "{2B5CD8F2-2968-46BB-BCF3-E8D3F5661001}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab 7 - Dynamic Structures", "Lab 7 - Dynamic Structures\Lab 7 - Dynamic Structures.vcxproj", "{59CE473D-8439-42E2-B009-7E7C313564F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -37,6 +39,7 @@ Global
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Debug|Win32.Build.0 = Debug|Win32
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Release|Win32.ActiveCfg = Release|Win32
 		{7B4B5C9C-38DF-4D66-8FB0-F46357AA95A4}.Release|Win32.Build.0 = Release|Win32
+<<<<<<< HEAD
 		{95CE18F3-3DC2-451E-9A90-1BA894E3176A}.Debug|Win32.ActiveCfg = Debug|Win32
 		{95CE18F3-3DC2-451E-9A90-1BA894E3176A}.Debug|Win32.Build.0 = Debug|Win32
 		{95CE18F3-3DC2-451E-9A90-1BA894E3176A}.Release|Win32.ActiveCfg = Release|Win32
@@ -57,6 +60,12 @@ Global
 		{2B5CD8F2-2968-46BB-BCF3-E8D3F5661001}.Debug|Win32.Build.0 = Debug|Win32
 		{2B5CD8F2-2968-46BB-BCF3-E8D3F5661001}.Release|Win32.ActiveCfg = Release|Win32
 		{2B5CD8F2-2968-46BB-BCF3-E8D3F5661001}.Release|Win32.Build.0 = Release|Win32
+=======
+		{59CE473D-8439-42E2-B009-7E7C313564F1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{59CE473D-8439-42E2-B009-7E7C313564F1}.Debug|Win32.Build.0 = Debug|Win32
+		{59CE473D-8439-42E2-B009-7E7C313564F1}.Release|Win32.ActiveCfg = Release|Win32
+		{59CE473D-8439-42E2-B009-7E7C313564F1}.Release|Win32.Build.0 = Release|Win32
+>>>>>>> HW3
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
