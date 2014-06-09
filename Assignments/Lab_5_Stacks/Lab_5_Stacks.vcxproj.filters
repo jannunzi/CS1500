@@ -14,9 +14,12 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <ClCompile Include="Lab_5_Stacks_Annunziato_Jose.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+=======
+>>>>>>> Lab_5_Stacks
 </Project>
