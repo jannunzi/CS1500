@@ -145,8 +145,8 @@ int main()
 	/*
 		The tree now looks like this:
 
-							Daniel
-				Bob						Frank
+					Daniel
+			Bob				Frank
 		Alice		Charlie		Edward		Gregory
 	*/
 
