@@ -90,11 +90,11 @@ int main()
 	insert(gregory, &root);
 
 	/*
-	The tree now looks like this:
+		The tree now looks like this:
 
-	Daniel
-	Bob					Frank
-	Alice		Charlie		Edward		Gregory
+					Daniel
+			Bob				Frank
+		Alice		Charlie		Edward		Gregory
 	*/
 
 	cout << endl << "In Order: " << endl;
