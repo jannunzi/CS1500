@@ -53,6 +53,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedDonutDataType", "Link
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinarySearchTrees", "BinarySearchTrees\BinarySearchTrees.vcxproj", "{939EAE65-332E-4709-BE52-D6C25158B4C1}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OverloadingAndOverriding", "OverloadingAndOverriding\OverloadingAndOverriding.vcxproj", "{8FF0B80B-9A09-4DFA-8AB3-CC62EBEAD616}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Poly", "Poly\Poly.vcxproj", "{25EEB141-048B-4AFF-86BA-CBE976C12B7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -159,6 +163,14 @@ Global
 		{939EAE65-332E-4709-BE52-D6C25158B4C1}.Debug|Win32.Build.0 = Debug|Win32
 		{939EAE65-332E-4709-BE52-D6C25158B4C1}.Release|Win32.ActiveCfg = Release|Win32
 		{939EAE65-332E-4709-BE52-D6C25158B4C1}.Release|Win32.Build.0 = Release|Win32
+		{8FF0B80B-9A09-4DFA-8AB3-CC62EBEAD616}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8FF0B80B-9A09-4DFA-8AB3-CC62EBEAD616}.Debug|Win32.Build.0 = Debug|Win32
+		{8FF0B80B-9A09-4DFA-8AB3-CC62EBEAD616}.Release|Win32.ActiveCfg = Release|Win32
+		{8FF0B80B-9A09-4DFA-8AB3-CC62EBEAD616}.Release|Win32.Build.0 = Release|Win32
+		{25EEB141-048B-4AFF-86BA-CBE976C12B7C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{25EEB141-048B-4AFF-86BA-CBE976C12B7C}.Debug|Win32.Build.0 = Debug|Win32
+		{25EEB141-048B-4AFF-86BA-CBE976C12B7C}.Release|Win32.ActiveCfg = Release|Win32
+		{25EEB141-048B-4AFF-86BA-CBE976C12B7C}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
