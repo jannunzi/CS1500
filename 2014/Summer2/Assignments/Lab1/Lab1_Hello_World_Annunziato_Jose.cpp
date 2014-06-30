@@ -1,5 +1,5 @@
-#include <iostream>		// for cout and endl
-#include <conio.h>		// for getch() (optional)
+#include <iostream>	// for cout and endl
+#include <conio.h>	// for getch() (optional)
 using namespace std;	// optional
 
 void main()
