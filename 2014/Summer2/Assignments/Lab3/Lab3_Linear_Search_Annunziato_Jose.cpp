@@ -73,4 +73,13 @@ void main()
 	index = searchApplicationsByPrice(14.99, prices, APPLICATION_COUNT);
 	displayApplication(index, titles, authors, prices, APPLICATION_COUNT);
 }
+/*
+	Output:
+
+	National Geographics, Natgeo, $9.99
+	NOAA Radar Pro, NOAA, $1.99
+	San Francisco Travel Guide, City Notes, $1.99
+	Phaidon Arch Travel Guide, Phaidon Press, $14.99
+
+*/
 // } given
