@@ -83,3 +83,55 @@ void main()
 
 */
 // } given
+
+// solution {
+void displayApplication(int applicationIndex, string titles[], string authors[], double prices[], int applicationCount)
+{
+	if (applicationIndex < applicationCount)
+	{
+		cout << titles[applicationIndex] << ", ";
+		cout << authors[applicationIndex] << ", ";
+		cout << "$" << prices[applicationIndex] << endl;
+	}
+	else
+	{
+		cout << "No application found" << endl;
+	}
+}
+
+int searchApplicationsByTitle(string title, string titles[], int applicationCount)
+{
+	for (int i = 0; i < applicationCount; i++)
+	{
+		if (title == titles[i])
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
+int searchApplicationsByAuthor(string author, string authors[], int applicationCount)
+{
+	for (int i = 0; i < applicationCount; i++)
+	{
+		if (author == authors[i])
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+
+int searchApplicationsByPrice(double price, double prices[], int applicationCount)
+{
+	for (int i = 0; i < applicationCount; i++)
+	{
+		if (price == prices[i])
+		{
+			return i;
+		}
+	}
+	return -1;
+}
+// } solution
