@@ -20,9 +20,7 @@ void selectionSort(int a[]) {
 			}
 		}
 		if (smallest != start) {
-			int temp = a[smallest];
-			a[smallest] = a[start];
-			a[start] = temp;
+			swap(a[smallest], a[start]);
 		}
 	}
 	cout << "Selection Sort Cost = " << cost << endl;
@@ -30,16 +28,14 @@ void selectionSort(int a[]) {
 
 void bubbleSort(int a[]) {
 	int cost = 0;
-	bool swap = true;
-	while (swap) {
-		swap = false;
+	bool swapped = true;
+	while (swapped) {
+		swapped = false;
 		for (int i = 0; i < SIZE - 1; i++) {
 			cost++;
 			if (a[i] > a[i + 1]) {
-				int temp = a[i];
-				a[i] = a[i + 1];
-				a[i + 1] = temp;
-				swap = true;
+				swap(a[i], a[i + 1]);
+				swapped = true;
 			}
 		}
 	}
@@ -55,14 +51,10 @@ int partition(int a[], int bottom, int top) {
 		qCost++;
 		if (a[i] < pivotValue) {
 			pivot++;
-			int temp = a[i];
-			a[i] = a[pivot];
-			a[pivot] = temp;
+			swap(a[i], a[pivot]);
 		}
 	}
-	int temp = a[bottom];
-	a[bottom] = a[pivot];
-	a[pivot] = temp;
+	swap(a[bottom], a[pivot]);
 
 	return pivot;
 }
@@ -75,8 +67,19 @@ void quickSort(int a[], int bottom, int top) {
 	}
 }
 
+void swap(int& a, int& b) {
+	int temp = a;
+	a = b;
+	b = temp;
+}
+
 int main()
 {
+	int x = 4, y = 7;
+	cout << "x: " << x << "\t y: " << y << endl;
+	swap(x, y);
+	cout << "x: " << x << "\t y: " << y << endl;
+
 	int a[] = { 12, 89, 23, 90, 34, 78, 45, 56, 21, 54, 98, 32, 65, 87 };
 //	int a[] = { 90, 89, 85, 78, 74, 67, 63, 56, 41, 45, 34, 23, 12, 5};
 	cout << "Before Selection Sort" << endl;
