@@ -2,6 +2,10 @@
 #include <string>
 using namespace std;
 
+// no global variables
+// white spaces
+// meaning variable names
+
 int main()
 {
 	const int LOGIN = 1;
@@ -12,16 +16,20 @@ int main()
 	string password;
 	string passwordVerify;
 	int choice;
+	// could use while() instead
 	do
 	{
+		// could put this in a function
 		cout << "Choose One:" << endl;
 		cout << "[1] Login" << endl;
 		cout << "[2] Register" << endl;
 		cout << "[3] Login as Guest" << endl;
 		cout << "[0] Quit" << endl;
 		cin >> choice;
+		// could use if else if instead
 		switch(choice)
 		{
+		// no magic numbers
 		case LOGIN:
 			cout << "Username: " << endl;
 			cin >> username;
