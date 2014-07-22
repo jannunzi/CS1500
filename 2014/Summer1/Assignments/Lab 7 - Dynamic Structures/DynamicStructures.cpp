@@ -48,9 +48,6 @@ int main()
 	Employee newEmployee = createEmployee();
 	addEmployee(&cs, newEmployee);
 	displayDepartment(&cs);
-
-	getchar();
-	getchar();
 }
 
 void addEmployee(Department* department, Employee newEmployee)
