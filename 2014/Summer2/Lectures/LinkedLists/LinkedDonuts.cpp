@@ -34,9 +34,9 @@ void append(Donut* head, Donut* newDonut) {
 	displayList(head);
 }
 
-void prepend(Donut* head, Donut* newDonut) {
-	newDonut->next = head;
-	head = newDonut;
+void prepend(Donut* *head, Donut* newDonut) {
+	newDonut->next = *head;
+	*head = newDonut;
 }
 
 void setInt(int *var, int val) {
@@ -45,6 +45,73 @@ void setInt(int *var, int val) {
 
 void setPtr(Donut* *var, Donut* val) {
 	*var = val;
+}
+
+Donut* searchForPrice(Donut* head, float price)
+{
+	Donut* current = head;
+	while (current != NULL) {
+		if (current->price == price)
+		{
+			return current;
+		}
+		current = current->next;
+	}
+	return NULL;
+}
+
+int countDonutsGreaterThanPrice(Donut* head, float price) {
+	Donut* current = head;
+	int count = 0;
+	while (current != NULL) {
+		if (current->price >= price)
+		{
+			count++;
+		}
+		current = current->next;
+	}
+	return count;
+}
+
+void insertAtIndex(Donut** head, int index, Donut* newDonut) {
+	if (index == 0) {
+		prepend(head, newDonut);
+		return;
+	}
+	int count = 1;
+	Donut* current = *head;
+	while (current != NULL) {
+		if (count == index) {
+			newDonut->next = current->next;
+			current->next = newDonut;
+			return;
+		}
+		count++;
+		current = current->next;
+	}
+}
+
+void deleteByPrice(Donut** head, float price) {
+	if (*head == NULL) {
+		return;
+	}
+	if ((*head)->price == price) {
+		Donut* d = *head;
+		*head = (*head)->next;
+		delete d;
+		return;
+	}
+	Donut* prev;
+	Donut* current = *head;
+	while (current != NULL) {
+		prev = current;
+		current = current->next;
+		if (current->price == price) {
+			prev->next = current->next;
+			delete current;
+			return;
+		}
+	}
 }
 
 int main() {
@@ -151,6 +218,33 @@ int main() {
 	displayList(head);
 
 	ptr = new Donut("Strawberry", 123.32);
-	prepend(head, ptr);
+	prepend(&head, ptr);
+	displayList(head);
+
+	cout << "Search" << endl;
+	Donut* found = searchForPrice(head, 2.35);
+	if (found != NULL)
+		cout << found->name << endl;
+
+	cout << "Count" << endl;
+	int count = countDonutsGreaterThanPrice(head, 2.00);
+	cout << "Count: " << count << endl;
+
+	cout << "Insert At Index" << endl;
+	Donut* newDonut = new Donut("Rocky Road", 12.2);
+	insertAtIndex(&head, 0, newDonut);
+	displayList(head);
+
+	newDonut = new Donut("Pistachio", 22.33);
+	insertAtIndex(&head, 1, newDonut);
+	displayList(head);
+
+	newDonut = new Donut("Jelly", 22.33);
+	insertAtIndex(&head, 7, newDonut);
+	displayList(head);
+
+	cout << "Delete" << endl;
+	deleteByPrice(&head, 22.33);
+	deleteByPrice(&head, 22.33);
 	displayList(head);
 }
