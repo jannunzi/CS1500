@@ -25,13 +25,20 @@ void displayList(Donut* head) {
 	}
 }
 
-void append(Donut* head, Donut* newDonut) {
-	Donut* current = head;
+void append(Donut** head, Donut* newDonut) {
+
+	if (*head == NULL)
+	{
+		*head = newDonut;
+		return;
+	}
+
+	Donut* current = *head;
 	while (current->next != NULL) {
 		current = current->next;
 	}
 	current->next = newDonut;
-	displayList(head);
+//	displayList(*head);
 }
 
 void prepend(Donut* *head, Donut* newDonut) {
@@ -112,6 +119,14 @@ void deleteByPrice(Donut** head, float price) {
 			return;
 		}
 	}
+}
+
+void concatenate(Donut* l1, Donut* l2) {
+	Donut* current = l1;
+	while (current->next != NULL) {
+		current = current->next;
+	}
+	current->next = l2;
 }
 
 int main() {
@@ -207,13 +222,13 @@ int main() {
 	displayList(head);
 
 	ptr = new Donut("Vanilla", 2.35);
-	append(head, ptr);
+	append(&head, ptr);
 	ptr = new Donut("Boston Cream", 2.35);
-	append(head, ptr);
+	append(&head, ptr);
 	ptr = new Donut("Bear Claw", 2.35);
-	append(head, ptr);
+	append(&head, ptr);
 	ptr = new Donut("Butter Pecan", 2.35);
-	append(head, ptr);
+	append(&head, ptr);
 
 	displayList(head);
 
@@ -246,5 +261,24 @@ int main() {
 	cout << "Delete" << endl;
 	deleteByPrice(&head, 22.33);
 	deleteByPrice(&head, 22.33);
+	displayList(head);
+
+	cout << "List 2" << endl;
+
+	Donut* A = new Donut("A", 1.2);
+	Donut* B = new Donut("B", 1.3);
+	Donut* C = new Donut("C", 1.4);
+	Donut* D = new Donut("D", 1.5);
+
+	Donut* list2 = NULL;
+	append(&list2, A);
+	append(&list2, B);
+	append(&list2, C);
+	append(&list2, D);
+
+	displayList(list2);
+
+	displayList(head);
+	concatenate(head, list2);
 	displayList(head);
 }
