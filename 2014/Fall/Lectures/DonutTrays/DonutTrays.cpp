@@ -35,6 +35,32 @@ int main() {
 	cin >> tray1->size;
 	tray1->donuts = new Donut*[tray1->size];
 
-	createTray(tray1);
-	displayTray(tray1);
+//	createTray(tray1);
+//	displayTray(tray1);
+
+	Donut a, b, c, d, e;
+	Donut t1[5];
+	t1[0] = a;
+	t1[1] = b; // etc...
+
+	Donut t2[] = { a, b, c };
+	
+	cout << t1[2].name << endl;
+	cout << t2[1].price << endl;
+
+	Donut* t3[3];
+	t3[0] = &a;
+	t3[1] = &b;
+	t3[2] = &c;
+
+	cout << (*t3[0]).price << endl;
+	cout << t3[1]->price << endl;
+
+	Donut* t4[] = { &a, &b, &c, &d };
+
+	int n;
+	cin >> n;
+	Donut* *t5 = new Donut*[n];
+
+	int  *dynamic = new int[n];
 }
