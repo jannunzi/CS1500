@@ -37,14 +37,29 @@ private:
 	float salary;
 };
 
+void fire(Employee * e) {
+	delete e;
+}
+
 int main() {
 	Employee alice = {"alice", -123};
 	Employee bob;
+
+	Employee es[] = { alice, bob };
+
+	fire(&bob);
+
+
 
 	cout << alice.getName() << endl;
 	cout << alice.getSalary() << endl;
 
 	Employee * charlie = new Employee();
+
+//	delete charlie;
+
+	fire(charlie);
+
 	charlie->setName("Charlie");
 	Employee * dan = new Employee("Dan", 234432);
 	cout << dan->getName() << " $" << dan->getSalary() << endl;
