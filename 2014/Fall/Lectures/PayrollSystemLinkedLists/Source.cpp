@@ -28,6 +28,64 @@ struct Company {
 	Employee * head = NULL;
 	Employee * tail = NULL;
 
+	void insertAtPosition(int position, Employee * employee) {
+		if (head == NULL) {
+			return;
+		}
+
+		if (position == 0) {
+			employee->next = head;
+			head = employee;
+			return;
+		}
+
+		int counter = 0;
+		Employee * current = head;
+		Employee * previous = current;
+		while (current != NULL) {
+			if (counter == position) {
+				previous->next = employee;
+				employee->next = current;
+				return;
+			}
+			counter++;
+			previous = current;
+			current = current->next;
+		}
+
+		if (counter == position) {
+			previous->next = employee;
+			tail = employee;
+		}
+	}
+
+	void aquires(Company * otherCompany) {
+		if (head == NULL && tail == NULL)
+		{
+			head = otherCompany->head;
+			tail = otherCompany->tail;
+		}
+
+		if (otherCompany->head == NULL && otherCompany->tail == NULL)
+		{
+			return;
+		}
+
+		tail->next = otherCompany->head;
+		tail = otherCompany->tail;
+	}
+
+	void hirePrepend(Employee* employee) {
+		if (head == NULL && tail == NULL) {
+			head = employee;
+			tail = employee;
+			return;
+		}
+
+		employee->next = head;
+		head = employee;
+	}
+
 	// appends new employee to bottom of list
 	void hire(Employee * employee) {
 		if (head == NULL && tail == NULL) {
@@ -51,6 +109,13 @@ struct Company {
 			if (id == current->id) {
 				//previous->display();
 				//current->display();
+
+				if (head == tail) {
+					delete current;
+					head = NULL;
+					tail = NULL;
+					return;
+				}
 
 				if (current == head) {
 					head = current->next;
