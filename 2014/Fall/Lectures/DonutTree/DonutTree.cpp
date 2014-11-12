@@ -25,18 +25,43 @@ struct DonutTray {
 		this->name = name;
 		this->root = root;
 	}
-	void insert(Donut * newDonut) {
-		insert(newDonut, root);
-	}
-	void insert(Donut * newDonut, Donut * root) {
+	Donut* findFirst() {
 		if (root == NULL)
-		{
-			root = newDonut;
+			return NULL;
+		Donut * current = root;
+		while (current->left != NULL) {
+			current = current->left;
 		}
-		if (name > root->name)
-			return insert(newDonut, root->right);
-		else if (name < root->name)
-			return insert(newDonut, root->left);
+		return current;
+	}
+	Donut* findLast() {
+		if (root == NULL)
+			return NULL;
+		Donut * current = root;
+		while (current->right != NULL) {
+			current = current->right;
+		}
+		return current;
+	}
+	void insert(Donut * newDonut) {
+		cout << "Inserting: " << endl;
+		newDonut->display();
+		insert(newDonut, &root);
+	}
+	void insert(Donut * newDonut, Donut* *root) {
+		if (*root == NULL)
+		{
+			*root = newDonut;
+			return;
+		}
+		if (newDonut->name > (*root)->name)
+		{
+			insert(newDonut, &(*root)->right);
+		}
+		else if (newDonut->name < (*root)->name)
+		{
+			insert(newDonut, &(*root)->left);
+		}
 	}
 	Donut * search(string name) {
 		return search(name, root);
@@ -98,4 +123,8 @@ int main() {
 		Donut * r = new Donut("Rocky Roads", 321);
 		t1->insert(r);
 	}
+	t1->display();
+
+	t1->findFirst()->display();
+	t1->findLast()->display();
 }
