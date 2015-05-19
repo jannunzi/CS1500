@@ -4,7 +4,7 @@ using namespace std;
 
 struct Application {
 	string name;
-	float price;
+    float price;
 };
 
 int displayMainMenu();
