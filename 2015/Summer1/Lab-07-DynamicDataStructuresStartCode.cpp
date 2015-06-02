@@ -16,7 +16,7 @@ struct Department {
 };
 
 void displayEmployee(Employee employee);
-void displayDepartment(Department* department);
+void displayDepartment(const Department* department);
 Employee createEmployee();
 void addEmployee(Department* department, Employee employee);
 
