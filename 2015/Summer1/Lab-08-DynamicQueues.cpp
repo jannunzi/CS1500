@@ -43,6 +43,9 @@ struct DonutTray
 		capacity = size;
 		donuts = new Donut*[capacity];
 	}
+	
+	// default constructor
+	DonutTray(){}
 };
 
 // putting and removing donuts from the tray
