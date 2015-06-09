@@ -6,12 +6,15 @@ struct Donut
 {
 	string flavor = "Chocolate";
 	double price = 0.0;
-	Donut* next = NULL;
-	Donut(){}
+	Donut* next = NULL; // dont initialize on older compilers
+	Donut(){
+		this->next = NULL;
+	}
 	Donut(string flavor, double price)
 	{
 		this->flavor = flavor;
 		this->price = price;
+		this->next = NULL;
 	}
 	void display()
 	{
