@@ -7,7 +7,7 @@ class Shape {
 protected:
 	string name;
 public:
-	Shape(){}
+	Shape() : Shape("") {}
 	Shape(string name)
 	{
 		setName(name);
