@@ -86,12 +86,15 @@ protected:
 	Line* right;
 public:
 	Rectangle(){}
-	Rectangle(string name, Line* top, Line* right, Line* bottom, Line* left);
+	Rectangle(string name, Line* top, Line* right, Line* bottom, Line* left); // complete this code
 	void setTopLine(Line* top) { this->top = top; }
 	Line* getTopLine() { return this->top; }
-	double area(){}
-	double perimeter(){}
-	void display(){}
+	
+	// implement rest of setters and getters
+	
+	double area(){} // complete this code
+	double perimeter(){} // complete this code
+	void display(){} // complete this code
 };
 
 class Square : public Rectangle
