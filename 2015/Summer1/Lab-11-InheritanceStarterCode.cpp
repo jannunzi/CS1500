@@ -61,12 +61,12 @@ protected:
 public:
 	Line(){}
 	Line(string name, Point* a, Point* b)
-		: Shape(name){}
-	void setPointA(Point* a){}
-	void setPointB(Point* b){}
-	Point* getPointA() {}
-	Point* getPointB(){}
-	double length() {}
+		: Shape(name){} // complete this code
+	void setPointA(Point* a){} // complete this code
+	void setPointB(Point* b){} // complete this code
+	Point* getPointA() {} // complete this code
+	Point* getPointB(){} // complete this code
+	double length() {} // complete this code
 	void display()
 	{
 		cout << "Line: " << endl;
